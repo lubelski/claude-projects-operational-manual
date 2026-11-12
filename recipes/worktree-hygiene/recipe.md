@@ -21,7 +21,7 @@ Isolation prevents agents from colliding. A clean main checkout plus an installe
 
 - **Untracked worktree folders show up in `git status`** in the default checkout until they're ignored.
 - **The first dependency fetch in a fresh worktree can be very slow.** Point the build tool at an existing package cache where it supports that.
-- **Merged branches linger on the remote** if the merge doesn't delete them. Check after merging.
+- **Merged branches linger on the remote** if the merge doesn't delete them. Check after merging. Turning on GitHub's "Automatically delete head branches" setting avoids most of this. A second project found that cloud threads couldn't delete remote branches at all, so that setting was the main fix there ([recipe 25](../hygiene-without-asking/recipe.md)).
 
 ## Example
 

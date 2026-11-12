@@ -2,6 +2,10 @@
 
 These are recipes for shipping software with a Claude project: a coordinator, a set of worker threads, one or more machines, a tracker, and a human who directs. They come from running a real project, a desktop app built by agents on a dedicated build machine. Product details are left out on purpose.
 
+A second project added to it: a small codebase worked entirely by cloud threads, with no build machine. Where its practice was the same idea as an existing recipe, the two were merged into one recipe that carries both projects' experience, with the second project's version as a named variant. Recipes 01, 03, 04 and 07 have such additions. Where its practice was different, it became a new recipe (19 to 25), cross-referenced to the ones it touches.
+
+The manual is a grab bag of recipes, not one system. Recipes may contradict each other, and no project has to adopt all of them or any particular combination. A project picks the set it deploys, and only that set needs to be coherent.
+
 These are field notes, not a specification. Each recipe records what we did, why we did it, and what bit us. The platform changes quickly. Treat any claim about tool behavior as dated, and check it against current docs before you rely on it.
 
 ## Who this is for
@@ -20,6 +24,8 @@ A person who runs a Claude project and wants agents to ship real changes while t
 | **Standing orders** | Rules that agents follow because they read them, not because a system enforces them. See [recipe 03](recipes/where-standing-orders-live/recipe.md). |
 | **Build machine** | A machine that agents drive on their own. See [recipe 05](recipes/two-machine-modes/recipe.md). |
 | **Personal machine** | The director's own machine. Agents act on it only when asked. |
+| **Agenda** | A list of open topics kept in project memory and walked one at a time. See [recipe 20](recipes/stored-agenda/recipe.md). |
+| **Sitrep** | A short situation report on request: shipped, waiting on the director, in flight, agenda remaining. See [recipe 21](recipes/sitrep/recipe.md). |
 
 ## Recipes
 
@@ -52,6 +58,19 @@ A person who runs a Claude project and wants agents to ship real changes while t
 17. [IT tickets for the human](recipes/it-tickets/recipe.md)
 18. [Routine cost reports](recipes/cost-reports/recipe.md)
 
+**E. Conversation and cadence**
+
+19. [Referencable labels](recipes/referencable-labels/recipe.md)
+20. [A stored agenda, walked one item at a time](recipes/stored-agenda/recipe.md)
+21. [Sitrep](recipes/sitrep/recipe.md)
+22. [Design in chat, then build](recipes/design-in-chat/recipe.md)
+23. [Retrospectives triggered by output](recipes/output-triggered-retrospectives/recipe.md)
+
+**F. Review and cleanup**
+
+24. [Review by a separate thread](recipes/review-by-separate-thread/recipe.md)
+25. [Hygiene without asking](recipes/hygiene-without-asking/recipe.md)
+
 **Appendix:** [Field notes](recipes/appendix-field-notes.md)
 
 ## Recipe format
@@ -68,4 +87,4 @@ Each `recipe.md` has the same five parts:
 
 ## Contributing
 
-Add a recipe when a procedure has worked at least once and you would do it again. Date any claim about how a tool behaves. Keep product names, machine names, and private paths out.
+Add a recipe when a procedure has worked at least once and you would do it again. If it is the same idea as an existing recipe, merge it in, keeping both projects' experience (a named variant section works well). If it is a genuinely different approach, add it as its own recipe and cross-reference the ones it overlaps or contradicts. Say which project an addition came from, in general terms. Date any claim about how a tool behaves. Keep product names, machine names, and private paths out.

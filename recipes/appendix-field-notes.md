@@ -41,3 +41,21 @@ Getting test builds to the director's laptop started as a push design over a pri
 ## Small win, honestly reported
 
 A "make old sessions load faster" PR measured its own gain: about 10 ms out of 250 ms. It said so, and named the real cause (the external tool's startup). Honest numbers in a PR are worth more than the change. [Recipe 09](pull-requests/recipe.md).
+
+## From a second project
+
+### The deferred question, asked again
+
+The director deferred a design hook. The coordinator then asked two follow-up questions that only mattered if the hook existed. The director: "it sounds like you're asking about a question we just deferred." Fix: record deferred questions in the stored agenda, and check new questions against them. [Recipe 20](stored-agenda/recipe.md).
+
+### The stale branch that held intent
+
+A leftover branch looked safe to delete, but held about 150 lines of tests that never reached main. They targeted an API that no longer existed. A thread reported what they were meant to prove, and the director chose to rewrite five tests fresh in a small PR. Then the branch could go. [Recipe 25](hygiene-without-asking/recipe.md).
+
+### The branch nobody could delete
+
+A standing order allowed agents to delete stale branches. The delete still failed: a cloud thread's git connection may push only to its own branch, and its GitHub tools had no branch delete. The director deleted it by hand, and automatic head branch deletion became the standing fix. [Recipes 03](where-standing-orders-live/recipe.md) and [25](hygiene-without-asking/recipe.md).
+
+### Proving the tests test something
+
+A reviewer thread broke each behavior in the source, one at a time. Each of 8 breaks failed exactly the matching new test. That told the coordinator more than "all tests pass", and it needed no repo access of its own. [Recipe 24](review-by-separate-thread/recipe.md).
