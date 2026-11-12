@@ -27,6 +27,16 @@ Rules of thumb:
 - Policies that workers must apply go in both places: the policy in project instructions, and the worker's procedure in repo docs.
 - Anything that has to hold even if a model disagrees needs a mechanical control, not a note.
 
+### Variant: the coordinator writes, on request
+
+From a second project. The table above has the director own the project instructions text. In the second project the director dictated in chat ("update standing orders to allow X"), and the coordinator edited the project instructions.
+
+1. Number the orders, so they can be referenced: `[1] Repo hygiene. ...`.
+2. The coordinator edits only when asked, quotes the new wording back in chat, and links to project settings so the director can adjust it.
+3. Keep each order short, with its guard written in. For example: "Before deleting a branch, confirm it holds no unmerged work that is still wanted. If it does, report that instead of deleting."
+
+The director keeps authority without doing the typing. The cost is that the coordinator chooses the wording, so the quote-back matters.
+
 ## Why it works
 
 Each reader gets the rule from the place it actually reads. Separating rules from facts keeps authority clear. Memory is the coordinator's notebook, and the director's rules shouldn't depend on how the coordinator worded a note.
@@ -36,6 +46,9 @@ Each reader gets the rule from the place it actually reads. Separating rules fro
 - **The coordinator has a built-in standing order to save what it learns.** That's useful, but it decides what counts and how to word it. Promote anything you consider a rule into project instructions.
 - **Agents usually can't edit their own rules.** Some safety modes block an agent from changing `AGENTS.md`, skills, or settings as "self-modification". Plan for the director to land those changes ([recipe 17](../it-tickets/recipe.md)).
 - **Docs don't move safety checks.** A permission classifier that runs in the agent's session judges each action itself. Writing "merges are allowed" in the repo did not change its mind ([recipe 11](../auto-mode-merges/recipe.md)).
+
+- **Running threads don't see a new order.** Threads read project instructions at start. A thread started before a change misses it, so the coordinator passes the relevant order along in its message to that thread.
+- **Writing an order doesn't grant a capability.** The second project's first order allowed agents to delete stale branches, but cloud threads couldn't delete branches at all ([recipe 25](../hygiene-without-asking/recipe.md)). Check that agents can actually do what an order allows.
 
 ## Example
 
