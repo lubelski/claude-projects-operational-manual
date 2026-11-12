@@ -1,3 +1,8 @@
+---
+name: worktree-hygiene
+description: Use when several agents share a machine; covers the default checkout, per-task worktrees, and cleanup.
+---
+
 # 07. Worktree hygiene
 
 ## Problem

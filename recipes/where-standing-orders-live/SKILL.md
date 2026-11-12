@@ -1,3 +1,8 @@
+---
+name: where-standing-orders-live
+description: Use when deciding whether a rule belongs in project instructions, repo docs, or project memory.
+---
+
 # 03. Where standing orders live
 
 ## Problem
@@ -34,8 +39,8 @@ Each reader gets the rule from the place it actually reads. Separating rules fro
 ## Pitfalls
 
 - **The coordinator has a built-in standing order to save what it learns.** That's useful, but it decides what counts and how to word it. Promote anything you consider a rule into project instructions.
-- **Agents usually can't edit their own rules.** Some safety modes block an agent from changing `AGENTS.md`, skills, or settings as "self-modification". Plan for the director to land those changes ([recipe 17](17-it-tickets.md)).
-- **Docs don't move safety checks.** A permission classifier that runs in the agent's session judges each action itself. Writing "merges are allowed" in the repo did not change its mind ([recipe 11](11-auto-mode-merges.md)).
+- **Agents usually can't edit their own rules.** Some safety modes block an agent from changing `AGENTS.md`, skills, or settings as "self-modification". Plan for the director to land those changes ([recipe 17](../it-tickets/SKILL.md)).
+- **Docs don't move safety checks.** A permission classifier that runs in the agent's session judges each action itself. Writing "merges are allowed" in the repo did not change its mind ([recipe 11](../auto-mode-merges/SKILL.md)).
 
 ## Example
 

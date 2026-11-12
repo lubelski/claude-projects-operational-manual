@@ -1,3 +1,8 @@
+---
+name: merge-authority
+description: Use when deciding who may merge a PR; low-risk and higher-risk tiers as standing orders.
+---
+
 # 10. Merge authority as standing orders
 
 ## Problem
@@ -34,7 +39,7 @@ Split PRs by risk, and write the rule twice: the policy in project instructions,
 
 1. State the risk (low or higher) and why, in the PR's Notes.
 2. For low risk, once the build and tests pass on the pushed commit, post a PR comment with: the risk call, the coordinator's approval (quoted, with its time), and the SHA with build and test results.
-3. Mark the PR ready, merge it as a standalone command ([recipe 11](11-auto-mode-merges.md)), then pull main into the default checkout.
+3. Mark the PR ready, merge it as a standalone command ([recipe 11](../auto-mode-merges/SKILL.md)), then pull main into the default checkout.
 4. For higher risk, escalate and do not merge.
 
 ## Why it works
@@ -43,6 +48,6 @@ Most changes are low risk and move at agent speed. The director's attention goes
 
 ## Pitfalls
 
-- **Changes to agent rules always need the director.** It's also often mechanically enforced: agents can't commit edits to their own rules ([recipe 03](03-where-standing-orders-live.md)). File it as a ticket for the director ([recipe 17](17-it-tickets.md)).
-- **Writing the policy doesn't grant the permission.** A session's safety classifier may still refuse the merge. That's [recipe 11](11-auto-mode-merges.md).
+- **Changes to agent rules always need the director.** It's also often mechanically enforced: agents can't commit edits to their own rules ([recipe 03](../where-standing-orders-live/SKILL.md)). File it as a ticket for the director ([recipe 17](../it-tickets/SKILL.md)).
+- **Writing the policy doesn't grant the permission.** A session's safety classifier may still refuse the merge. That's [recipe 11](../auto-mode-merges/SKILL.md).
 - **Allow `gh pr ready` and `gh pr merge` in the repo's agent settings**, or the worker will stop at a permission prompt.

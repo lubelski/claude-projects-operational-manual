@@ -1,3 +1,8 @@
+---
+name: connectors
+description: Use when threads on different machines need the same outside tools, such as the issue tracker.
+---
+
 # 08. Account connectors versus machine-local config
 
 Observed in November 2026.
@@ -21,4 +26,4 @@ There's one place to manage access, and every thread, cloud or machine, sees the
 
 - **A misfiled workspace.** Our tracker connector was signed in to a personal workspace. The first issues were filed there and had to be re-filed and cancelled by hand, because the connector could no longer see the old workspace after the switch.
 - **Old threads may hold an old sign-in.** Verify with a new thread.
-- **The coordinator may not use connectors at all.** It delegates connector work to threads, or to a chief of staff ([recipe 04](04-chief-of-staff.md)).
+- **The coordinator may not use connectors at all.** It delegates connector work to threads, or to a chief of staff ([recipe 04](../chief-of-staff/SKILL.md)).

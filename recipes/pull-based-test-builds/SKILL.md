@@ -1,3 +1,8 @@
+---
+name: pull-based-test-builds
+description: Use when the director needs to try main, branches, or PRs on a personal machine without agents reaching into it.
+---
+
 # 13. Pull-based test builds
 
 ## Problem
@@ -11,7 +16,7 @@ Flip it to **pull**: a small test-manager app on the personal machine.
 1. A menu-bar app on the personal machine polls the repo for main, branches, and open PRs.
 2. One or two clicks build (or download) and install the chosen ref.
    - **main** installs as the regular app.
-   - **Branches and PRs** install as a separate dev app, with its own identifier and settings, so both run side by side ([recipe 05](05-two-machine-modes.md)).
+   - **Branches and PRs** install as a separate dev app, with its own identifier and settings, so both run side by side ([recipe 05](../two-machine-modes/SKILL.md)).
 3. It never replaces a running copy. It installs once the app quits.
 4. It also has a CLI with JSON output (for example `install pr/125`), so an agent can drive it when asked.
 5. Start by building from source on the personal machine. It's simpler, and the test manager itself will rarely change.

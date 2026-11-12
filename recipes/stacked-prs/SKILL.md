@@ -1,3 +1,8 @@
+---
+name: stacked-prs
+description: Use when a PR is built on another unmerged PR's branch; covers merge order and rebasing.
+---
+
 # 14. Stacked PRs and merge order
 
 ## Problem
@@ -18,5 +23,5 @@ Stacks let work continue without waiting for review. Explicit order and a rebase
 ## Pitfalls
 
 - **Squash merges rewrite the base.** The stacked PR then shows the base's changes again until it's rebased.
-- **The chief of staff should flag stacks** on the board, since a PR list doesn't make them obvious ([recipe 04](04-chief-of-staff.md)).
+- **The chief of staff should flag stacks** on the board, since a PR list doesn't make them obvious ([recipe 04](../chief-of-staff/SKILL.md)).
 - **Each rebase voids the attestation.** Test again on the new SHA.

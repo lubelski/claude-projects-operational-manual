@@ -1,3 +1,8 @@
+---
+name: light-testing
+description: Use when setting test expectations without heavy CI: attest, revert first, and measure before adding process.
+---
+
 # 12. Light testing: attest, revert first, measure
 
 ## Problem
@@ -11,7 +16,7 @@ Start light, and measure before adding process.
 1. **Keep hosted CI narrow on purpose.** Run only cheap checks in hosted CI. Say so in the docs, so nobody reads "CI passed" as "the app was built".
 2. **Workers attest.** Each worker builds and runs the test suite in its own worktree on the pushed commit. It reports the SHA, the build result, and the test counts in the PR. A later push voids the attestation.
 3. **Check main at the start.** Before starting work, confirm main builds and passes. Report it if not.
-4. **Revert first.** If a merge breaks main, revert it immediately, then fix forward on a branch. A revert needs no approval ([recipe 10](10-merge-authority.md)).
+4. **Revert first.** If a merge breaks main, revert it immediately, then fix forward on a branch. A revert needs no approval ([recipe 10](../merge-authority/SKILL.md)).
 5. **Log every incident** on one tracker issue: a red main, a revert, or a bug that reached the installed app. That log is the measurement.
 6. **Review the numbers on a date.** Adopt heavier tiers (an independent re-run on the build machine, a nightly suite, a release gate) only where the log shows a problem.
 
@@ -32,4 +37,4 @@ main isn't production. The installed app on the director's machine is. Fast merg
 
 - **Over-design.** We wrote a full tiered design (attestation scripts, a watcher that reverts on red, a nightly known-good tag) before measuring anything. The director parked it as a reference. The light version shipped in four lines.
 - **Merge skew.** Two green PRs can break main together. Reverting first covers it. A required up-to-date check is the heavier answer.
-- **Hand-test areas.** Window, drag, and text-input changes can't be attested by tests alone. Mark them higher risk, and get a person to try a dev build ([recipe 13](13-pull-based-test-builds.md)).
+- **Hand-test areas.** Window, drag, and text-input changes can't be attested by tests alone. Mark them higher risk, and get a person to try a dev build ([recipe 13](../pull-based-test-builds/SKILL.md)).

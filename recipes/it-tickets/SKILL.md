@@ -1,3 +1,8 @@
+---
+name: it-tickets
+description: Use when work needs a change only the human can make, such as permissions or agent-rule edits.
+---
+
 # 17. IT tickets for the human
 
 ## Problem
@@ -8,7 +13,7 @@ Some changes only a human can make: permission settings, an agent's own rules, `
 
 When work needs a step agents may not or cannot take, the coordinator files a ticket for the director, "by the book", and sends the link.
 
-1. **The title** uses the director's prefix ([recipe 15](15-shared-tracker-login.md)): `Director | <what to do>`.
+1. **The title** uses the director's prefix ([recipe 15](../shared-tracker-login/SKILL.md)): `Director | <what to do>`.
 2. **The description** is a checklist the director can work through without context:
    - each item is a checkbox, with the exact command, file, or snippet
    - what each item unblocks, such as which PRs
@@ -20,7 +25,7 @@ When work needs a step agents may not or cannot take, the coordinator files a ti
 Typical items:
 
 - Allow rules for `gh pr ready` and `gh pr merge` in the repo's agent settings.
-- An `autoMode.allow` sentence in the build machine's user settings ([recipe 11](11-auto-mode-merges.md)).
+- An `autoMode.allow` sentence in the build machine's user settings ([recipe 11](../auto-mode-merges/SKILL.md)).
 - Changes to `AGENTS.md`, skills, or settings, which agents can't commit themselves.
 - Fixing package-manager permissions on a machine.
 - Reconnecting a connector to the right workspace.

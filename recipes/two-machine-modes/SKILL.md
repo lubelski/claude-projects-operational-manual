@@ -1,3 +1,8 @@
+---
+name: two-machine-modes
+description: Use when adding a machine to the project; classifies it as an autonomous build machine or a personal machine.
+---
+
 # 05. Two machine modes
 
 ## Problem
@@ -19,7 +24,7 @@ Rules:
 
 1. Write the repo's machine guidance by mode: "on an autonomous build machine...", "on a personal machine...". Never name a specific machine or path. More machines will come online in either mode.
 2. Keep the project's default device on the build machine, so feature threads land there without a prompt.
-3. Get builds to the personal machine by **pull**, not by agents reaching into it ([recipe 13](13-pull-based-test-builds.md)).
+3. Get builds to the personal machine by **pull**, not by agents reaching into it ([recipe 13](../pull-based-test-builds/SKILL.md)).
 
 ## Why it works
 

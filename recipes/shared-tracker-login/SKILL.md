@@ -1,3 +1,8 @@
+---
+name: shared-tracker-login
+description: Use when every agent and the director share one issue-tracker login; owner goes in the title prefix.
+---
+
 # 15. One shared tracker login
 
 ## Problem
@@ -14,7 +19,7 @@ Put the owner in the title as a prefix:
 
 For example: `Dana | Add the merge rule on the build machine`, or `Worker input-box | Fix scrollbar inset`.
 
-Leave ordinary product tickets, the ones that express intent ([recipe 16](16-tickets-express-intent.md)), without a prefix until someone owns them.
+Leave ordinary product tickets, the ones that express intent ([recipe 16](../tickets-express-intent/SKILL.md)), without a prefix until someone owns them.
 
 Write the convention into project memory, or better, the project instructions, so every thread follows it.
 

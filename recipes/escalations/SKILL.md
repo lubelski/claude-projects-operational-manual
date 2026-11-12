@@ -1,3 +1,8 @@
+---
+name: escalations
+description: Use when a thread or coordinator needs the director's decision; covers what every escalation must contain.
+---
+
 # 02. Escalations the director can answer from the chat
 
 ## Problem

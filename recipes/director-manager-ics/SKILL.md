@@ -1,3 +1,8 @@
+---
+name: director-manager-ics
+description: Use when setting up how a human director, the project coordinator, and worker threads divide work and talk to each other.
+---
+
 # 01. Director, manager, and ICs
 
 ## Problem
@@ -14,7 +19,7 @@ Give everyone a role from an ordinary engineering org, and write the roles into 
 
 Then add these working rules:
 
-1. When the coordinator relays a thread's question, it brings enough context that the director can decide without opening the thread ([recipe 02](02-escalations.md)).
+1. When the coordinator relays a thread's question, it brings enough context that the director can decide without opening the thread ([recipe 02](../escalations/SKILL.md)).
 2. Decisions use lettered or numbered lists, so the director can reply "1B, 2A".
 3. The coordinator passes the director's answer back to the thread by attaching the director's own message, not by paraphrasing it. A relayed paraphrase is not the director's approval.
 4. Several threads may run at once. Don't optimize the org chart before it hurts.
@@ -32,13 +37,13 @@ Here is a sample project-instructions snippet:
 
 ## Why it works
 
-It reuses a structure people already understand. The director's attention is the scarce resource, so the design spends it only on decisions. Stafford Beer's Viable System Model (VSM) is a useful lens. Threads are System 1 (operations), the coordinator is Systems 2 and 3 (coordination and control), and a chief of staff is System 3* (audit, [recipe 04](04-chief-of-staff.md)). The director holds Systems 4 and 5 (direction and identity).
+It reuses a structure people already understand. The director's attention is the scarce resource, so the design spends it only on decisions. Stafford Beer's Viable System Model (VSM) is a useful lens. Threads are System 1 (operations), the coordinator is Systems 2 and 3 (coordination and control), and a chief of staff is System 3* (audit, [recipe 04](../chief-of-staff/SKILL.md)). The director holds Systems 4 and 5 (direction and identity).
 
 ## Pitfalls
 
-- **A coordinator with no tools is a router, not a manager.** In our setup the coordinator could not read the repo or the tracker. Everything it knew came from worker reports. Its plans were grounded secondhand and missed drift on the board. The fix was [recipe 04](04-chief-of-staff.md).
-- **"Approved" means different things to different readers.** A safety check on a machine may accept only the human's own words. See [recipe 11](11-auto-mode-merges.md).
-- **The director still gets pulled in.** When a worker needs something only a human can do, such as a permission change, the coordinator should file it as a ticket ([recipe 17](17-it-tickets.md)) rather than send the director into the thread.
+- **A coordinator with no tools is a router, not a manager.** In our setup the coordinator could not read the repo or the tracker. Everything it knew came from worker reports. Its plans were grounded secondhand and missed drift on the board. The fix was [recipe 04](../chief-of-staff/SKILL.md).
+- **"Approved" means different things to different readers.** A safety check on a machine may accept only the human's own words. See [recipe 11](../auto-mode-merges/SKILL.md).
+- **The director still gets pulled in.** When a worker needs something only a human can do, such as a permission change, the coordinator should file it as a ticket ([recipe 17](../it-tickets/SKILL.md)) rather than send the director into the thread.
 
 ## Example
 
