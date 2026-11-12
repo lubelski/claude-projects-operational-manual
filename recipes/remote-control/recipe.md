@@ -1,8 +1,3 @@
----
-name: remote-control
-description: Use when connecting a machine to the project with Claude Code Remote Control.
----
-
 # 06. Connecting a machine with Remote Control
 
 Behavior observed in November 2026. Check current docs, since this changes.
@@ -17,7 +12,7 @@ The coordinator can only start threads on machines it can see. The first attempt
 2. From a shell, `cd` into the repo checkout and run `claude remote-control`. Leave it running. This "serves" that folder, so the project can start new sessions there.
    - Running `/remote-control` *inside* a chat session shares only that one session. It doesn't register the folder for new sessions.
 3. Pick a spawn mode when asked:
-   - **worktree**: each session gets its own git worktree inside the repo (`.claude/worktrees/<name>`). This is our default ([recipe 07](../worktree-hygiene/SKILL.md)).
+   - **worktree**: each session gets its own git worktree inside the repo (`.claude/worktrees/<name>`). This is our default ([recipe 07](../worktree-hygiene/recipe.md)).
    - **same-dir**: sessions share the checkout. Use this only if you manage worktrees yourself.
 4. Ask the coordinator to list devices. The machine and folder should now appear.
 5. Approve the first folder card. Approving a card also makes that device the project's **default**, and only the default skips the card next time. Keep the default on the build machine.

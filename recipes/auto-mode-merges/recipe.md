@@ -1,8 +1,3 @@
----
-name: auto-mode-merges
-description: Use when auto mode refuses gh pr merge on a build machine; covers autoMode.allow and its limits.
----
-
 # 11. Auto mode and merges
 
 Researched and tested in November 2026. Auto mode is evolving, so check the current docs: https://code.claude.com/docs/en/auto-mode-config
@@ -45,7 +40,7 @@ The classifier honors explicit user-level intent. Repo files and relayed approva
 
 ## Pitfalls
 
-- **An agent can't make this edit.** Changing `~/.claude/settings.json` is blocked as Self-Modification. The director applies it by hand, through an IT ticket ([recipe 17](../it-tickets/SKILL.md)).
+- **An agent can't make this edit.** Changing `~/.claude/settings.json` is blocked as Self-Modification. The director applies it by hand, through an IT ticket ([recipe 17](../it-tickets/recipe.md)).
 - **A relayed approval isn't the user's approval.** Only the user's own message naming the action clears a soft block. Attaching the director's message through the coordinator didn't work for us.
 - **It's a prose rule read by a model, not a hard boundary.** The fallbacks are a `permissions.ask` rule for `gh pr merge` (each merge becomes a one-tap prompt), merging by hand, or running merges from a cloud thread.
 - **Don't route around it silently.** We considered having cloud threads do all merges. The director chose to fix the cause instead, which kept one path for merges.

@@ -1,8 +1,3 @@
----
-name: cost-reports
-description: Use when measuring where effort goes: tokens, compute, and blocked, redone, or discarded work.
----
-
 # 18. Routine cost reports
 
 ## Problem

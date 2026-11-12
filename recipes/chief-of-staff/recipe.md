@@ -1,8 +1,3 @@
----
-name: chief-of-staff
-description: Use when the coordinator lacks repo or tracker tools and needs a long-lived thread to read the code and board for it.
----
-
 # 04. A chief-of-staff thread
 
 ## Problem

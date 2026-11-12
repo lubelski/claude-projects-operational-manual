@@ -1,8 +1,3 @@
----
-name: tickets-express-intent
-description: Use when filing or updating tracker tickets; intent tickets versus implementation sub-issues.
----
-
 # 16. Tickets express intent
 
 ## Problem
@@ -24,5 +19,5 @@ Intent stays stable and reviewable while implementation detail grows underneath 
 
 ## Pitfalls
 
-- **Statuses drift.** Sub-issues get implemented with no PR link, and parents stay "In Progress" after everything shipped. A periodic hygiene pass by the chief of staff ([recipe 04](../chief-of-staff/SKILL.md)) keeps the board trustworthy. Get the director's OK before bulk edits.
+- **Statuses drift.** Sub-issues get implemented with no PR link, and parents stay "In Progress" after everything shipped. A periodic hygiene pass by the chief of staff ([recipe 04](../chief-of-staff/recipe.md)) keeps the board trustworthy. Get the director's OK before bulk edits.
 - **Product questions block tickets quietly.** When a ticket needs a product call, say so in the ticket and in the coordinator's next decision list.
